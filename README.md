@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Initialization of Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created a asset management application React Project
 
-## Available Scripts
+## Installed Required Dependencies
 
-In the project directory, you can run:
+Installed mantine UI , supabase , Tanstack Query , Zustand
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in http://localhost:3000 .
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Supabase Setup
 
-### `npm test`
+Created Supabase Project
+Configured the Supabase in the application by creating a supabaseClient.js file
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Supabase Authentication
 
-### `npm run build`
+Integrated Supabase Authentication for login and logout.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Created login function for users to authenticate and logout function to signout.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Database Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Created a profiles table in the Supabase.
 
-### `npm run eject`
+Created an assets table to store all the asset details in the supabase.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Role Management
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Added logic in the application to differentiate between Admin and Management users based on the role field in the profiles table.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Assets Management
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Implemented CRUD operations for all the assets.
 
-## Learn More
+Created a new assets .
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+List out all the assets.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Updates of a existing assets in the edit assets section.
 
-### Code Splitting
+Deletion of the particular assets.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Pagination ,Filtering 
 
-### Analyzing the Bundle Size
+Implemented pagination and filtering for the assets lists.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Pagination is done using mantine.
 
-### Making a Progressive Web App
+Filtering is done by added a search bar of search assets button for filtering the assets.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Profile Management 
 
-### Advanced Configuration
+Created a profile page where users can view and update their personal information (first name, last name, and designation).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Ensured that only regular users (Management) can edit their profiles. Admins are restricted from editing user profiles.
 
-### Deployment
+### User Registration Form
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Created a user registration form to allow new users to register.
 
-### `npm run build` fails to minify
+Saved the registered users in the profiles table  in supabase with the role as "Management".
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## UI Styling and Layout
+
+Used Mantine UI for styling components such as buttons, forms, and tables.
+
+Applied custom styles like styled table headers in blue for Admin users,
+
+Positioned the logout buttons to the right end of the top of the page,
+
+Added spacing between buttons (login/logout, edit/delete).
+
+### Github Repository
+
+Created a Github repository of Asset Management Application and uploaded all the files in it.
+
+git init
+git config --global user.name "sowndhariyaj"
+git config --global user.email "sowndhariyajayaraju@gmail.com"
+git add .
+git commit -m "created asset management"
+git remote add origin https://github.com/sowndhariyaj/Asset-Management-Application.git
+git push origin -u master 
