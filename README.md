@@ -78,9 +78,15 @@ Added spacing between buttons (login/logout, edit/delete).
 Created a Github repository of Asset Management Application and uploaded all the files in it.
 
 git init
+
 git config --global user.name "sowndhariyaj"
+
 git config --global user.email "sowndhariyajayaraju@gmail.com"
+
 git add .
+
 git commit -m "created asset management"
+
 git remote add origin https://github.com/sowndhariyaj/Asset-Management-Application.git
+
 git push origin -u master 
